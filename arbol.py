@@ -149,6 +149,30 @@ class Arbol:
 
         return max(left, right) # funcion de python que retorna el elemento mayor
 
+    def insert(self, k):
+        if self.root is None:
+            self.root = Node(k)
+            return
+
+        cola = collections.deque()
+        cola.append(self.root)
+
+        while cola:
+            tmp = cola.popleft()
+
+            if tmp.left is not None:
+                cola.append(tmp.left)
+            else:
+                tmp.left = Node(k)
+                return
+            if tmp.right is not None:
+                cola.append(tmp.right)
+            else:
+                tmp.right = Node(k)
+                return
+
+
+
 
 
 
