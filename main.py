@@ -1,0 +1,17 @@
+import arbol
+
+arbolito = arbol.Arbol()
+arbolito.create_from_file("arbol.txt")
+arbolito.print_tree()
+arbolito.pre_orden()
+print("\n")
+arbolito.en_orden()
+print("\n")
+arbolito.pos_orden()
+print("\n")
+arbolito.bfs()
+print("\n")
+print(arbolito._search_iterative('N'))
+print(arbolito.search_recursive('T'))
+print(arbolito.search_recursive('J'))
+print("Altura: ", arbolito.height())
