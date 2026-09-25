@@ -5,7 +5,7 @@ class Node:
     def __init__(self, key=None):
         self.key = key
         self.left = None
-        self.rigt = None
+        self.right = None
 
 
 class Arbol:
